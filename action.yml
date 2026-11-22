@@ -1,0 +1,15 @@
+name: rig-dep2
+description: second dependency action for transitive resolution research
+outputs:
+  version:
+    description: version marker of the executing commit
+    value: ${{ steps.v.outputs.version }}
+runs:
+  using: composite
+  steps:
+    - id: v
+      shell: bash
+      run: |
+        V="$(cat "$GITHUB_ACTION_PATH/version.txt")"
+        echo "DEP2_VERSION=$V"
+        echo "version=$V" >> "$GITHUB_OUTPUT"

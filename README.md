@@ -1,2 +1,3 @@
 # rig-dep2
-second dependency action (bounty research)
+
+Authorized research rig (transitive action dependency resolution). Owned by the researcher.
